@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#0d5c2e"/>
+  <g fill="white">
+    <path d="M256 80c-60 80-140 140-140 200 0 60 50 90 100 90 20 0 35-5 40-15v55h-50v30h100v-30h-50v-55c5 10 20 15 40 15 50 0 100-30 100-90 0-60-80-120-140-200z"/>
+    <text x="256" y="460" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="80" font-weight="bold">+1</text>
+  </g>
+</svg>
