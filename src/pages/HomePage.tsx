@@ -51,10 +51,10 @@ export function HomePage() {
           </div>
 
           <div className="bg-gray-800/50 rounded-lg p-6">
-            <div className="text-3xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold text-white mb-2">Track</h3>
+            <div className="text-3xl mb-3">⚡</div>
+            <h3 className="text-lg font-semibold text-white mb-2">Drill</h3>
             <p className="text-sm text-gray-400">
-              Monitor your accuracy and see your improvement over time
+              Practice counting cards with focused drills and timed exercises
             </p>
           </div>
         </div>

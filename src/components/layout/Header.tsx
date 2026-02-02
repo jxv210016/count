@@ -1,17 +1,14 @@
 import { Link, useLocation } from 'react-router-dom'
 import { clsx } from 'clsx'
-import { useAuth } from '../../context/AuthContext'
 
 const NAV_ITEMS = [
   { path: '/play', label: 'Play' },
   { path: '/learn', label: 'Learn' },
   { path: '/drill', label: 'Drill' },
-  { path: '/progress', label: 'Progress' },
 ]
 
 export function Header() {
   const location = useLocation()
-  const { user, signOut, isConfigured } = useAuth()
 
   return (
     <header className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-40">
@@ -40,30 +37,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-
-          {/* User menu */}
-          <div className="flex items-center gap-4">
-            {isConfigured && user ? (
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-gray-400 hidden sm:block">
-                  {user.email}
-                </span>
-                <button
-                  onClick={() => signOut()}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Sign Out
-                </button>
-              </div>
-            ) : isConfigured ? (
-              <Link
-                to="/login"
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Sign In
-              </Link>
-            ) : null}
-          </div>
         </div>
 
         {/* Mobile navigation */}
