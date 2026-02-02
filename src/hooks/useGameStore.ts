@@ -7,7 +7,6 @@ import {
   getBestHandValue,
   getValidActions,
   isBlackjack,
-  isBusted,
   cardToString,
 } from '../lib/blackjack'
 import { calculateRunningCount, calculateTrueCount } from '../lib/counting'
@@ -118,8 +117,6 @@ export const useGameStore = create<GameStore>((set, get) => ({
 
     // Check for blackjacks
     const playerBJ = isBlackjack(playerCards)
-    const dealerShowsTen = ['10', 'J', 'Q', 'K'].includes(dealerCards[0].rank)
-    const dealerShowsAce = dealerCards[0].rank === 'A'
 
     let phase: GamePhase = 'playerTurn'
     if (playerBJ) {
@@ -142,6 +139,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
       cardsDealt,
       phase,
       lastDecisionFeedback: null,
+      showCount: false, // Auto-hide count on new deal
       sessionStats: {
         ...state.sessionStats,
         handsPlayed: state.sessionStats.handsPlayed + 1,

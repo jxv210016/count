@@ -194,7 +194,7 @@ export function BlackjackTable() {
       </div>
 
       {/* Count display - fixed position */}
-      <div className="fixed top-4 right-4 w-48">
+      <div className="fixed top-20 right-4 w-48">
         <CountDisplay
           runningCount={runningCount}
           trueCount={getTrueCount()}

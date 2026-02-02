@@ -27,9 +27,9 @@ export function PlayingCard({ card, size = 'md', className, showCount }: Playing
   const suitColor = SUIT_COLORS[card.suit]
 
   const sizeClasses = {
-    sm: 'w-12 h-16 text-sm',
-    md: 'w-16 h-22 text-lg',
-    lg: 'w-24 h-32 text-2xl',
+    sm: 'w-10 h-14 text-xs',
+    md: 'w-14 h-20 text-sm',
+    lg: 'w-20 h-28 text-lg',
   }
 
   // Get Hi-Lo count value for display
@@ -66,27 +66,21 @@ export function PlayingCard({ card, size = 'md', className, showCount }: Playing
   return (
     <div
       className={clsx(
-        'relative bg-white rounded-lg shadow-lg flex flex-col p-1.5',
+        'relative bg-white rounded-lg shadow-lg flex flex-col p-1 overflow-hidden',
         'border border-gray-300',
         sizeClasses[size],
         className
       )}
     >
       {/* Top left rank and suit */}
-      <div className={clsx('flex flex-col items-center leading-none', suitColor)}>
+      <div className={clsx('flex flex-col items-start leading-none', suitColor)}>
         <span className="font-bold">{card.rank}</span>
-        <span>{suitSymbol}</span>
+        <span className="text-xs">{suitSymbol}</span>
       </div>
 
       {/* Center suit */}
       <div className={clsx('flex-1 flex items-center justify-center', suitColor)}>
-        <span className="text-2xl">{suitSymbol}</span>
-      </div>
-
-      {/* Bottom right rank and suit (rotated) */}
-      <div className={clsx('flex flex-col items-center leading-none rotate-180', suitColor)}>
-        <span className="font-bold">{card.rank}</span>
-        <span>{suitSymbol}</span>
+        <span className="text-xl">{suitSymbol}</span>
       </div>
 
       {/* Count value overlay */}

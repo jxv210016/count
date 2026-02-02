@@ -65,5 +65,4 @@ export interface UserStats {
   decisionAccuracy: number
   currentStreak: number
   bestStreak: number
-  recentSessions: Session[]
 }

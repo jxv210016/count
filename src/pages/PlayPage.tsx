@@ -6,7 +6,7 @@ import { Modal } from '../components/ui/Modal'
 
 export function PlayPage() {
   const [showSettings, setShowSettings] = useState(false)
-  const { deckCount, dealerHitsSoft17, initializeGame, phase } = useGameStore()
+  const { deckCount, dealerHitsSoft17, initializeGame } = useGameStore()
   const [tempDeckCount, setTempDeckCount] = useState(deckCount)
   const [tempDealerHits, setTempDealerHits] = useState(dealerHitsSoft17)
 
@@ -20,7 +20,7 @@ export function PlayPage() {
       {/* Settings button */}
       <button
         onClick={() => setShowSettings(true)}
-        className="fixed top-20 left-4 z-30 p-2 bg-gray-800/90 rounded-lg hover:bg-gray-700 transition-colors"
+        className="fixed bottom-4 left-4 z-30 p-2 bg-gray-800/90 rounded-lg hover:bg-gray-700 transition-colors"
         title="Settings"
       >
         <svg
