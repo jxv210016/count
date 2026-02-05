@@ -1,5 +1,6 @@
 import { clsx } from 'clsx'
 import type { Card } from '../../types'
+import type { ReactElement } from 'react'
 
 interface PlayingCardProps {
   card: Card
@@ -42,7 +43,7 @@ const getSuitPattern = (rank: string, suit: string, size: 'sm' | 'md' | 'lg') =>
   
   const symbolSize = symbolSizes[rank]?.[size] || 'text-base'
   
-  const patterns: Record<string, JSX.Element[]> = {
+  const patterns: Record<string, ReactElement[]> = {
     'A': [
       <div key="center" className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${symbolSize}`}>
         {symbol}
