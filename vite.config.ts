@@ -37,7 +37,24 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        skipWaiting: true,
+        clientsClaim: true,
+        navigateFallback: '/count/index.html',
+        navigateFallbackDenylist: [/^\/count\/api/, /\.(?:png|jpg|jpeg|svg|gif|webp|ico)$/],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/jxv210016\.github\.io\/count\/.*/i,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'count-app-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 7 // 7 days
+              }
+            }
+          }
+        ]
       }
     })
   ],
