@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="24" fill="#0d5c2e"/>
+  <g fill="white">
+    <path d="M96 30c-23 30-53 53-53 75 0 23 19 34 38 34 8 0 13-2 15-6v21h-19v11h38v-11h-19v-21c2 4 7 6 15 6 19 0 38-11 38-34 0-22-30-45-53-75z"/>
+    <text x="96" y="172" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="30" font-weight="bold">+1</text>
+  </g>
+</svg>
